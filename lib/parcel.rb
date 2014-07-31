@@ -1,13 +1,19 @@
 class Parcel
-  def initalize(weight, height, width, length)
+  def initialize(weight, height, width, length)
     @weight = weight
     @height = height
     @width = width
     @length = length
+    @volume = volume
+  end
+
+  def volume
+    @height * @width * @length
+  end
+
+  def cost
+    @volume * 2.5 + @weight * 1.5
   end
 end
+ # Parcel.new(10, 5, 3, 9)
 
- volume = @lenth * @width * @height
- cost_to_ship = volume * 2.5 + @weight * 1.5
-
-puts(1.5, 3, 6, 2)
